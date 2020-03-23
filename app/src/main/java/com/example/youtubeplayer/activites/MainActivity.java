@@ -1,8 +1,10 @@
-package com.example.youtubeplayer;
+package com.example.youtubeplayer.activites;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.youtubeplayer.R;
 
 public class MainActivity extends AppCompatActivity {
 
