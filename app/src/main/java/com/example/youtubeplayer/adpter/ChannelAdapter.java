@@ -1,12 +1,14 @@
 package com.example.youtubeplayer.adpter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -48,20 +50,46 @@ public class ChannelAdapter extends RecyclerView.Adapter<ChannelAdapter.Holder> 
         TextView channelName;
         TextView channelSubscriptions;
         Button channelBtnSups;
+        boolean isSubscribed = false;
+
+
+
 
         public Holder(@NonNull View itemView) {
             super(itemView);
             channelImg = itemView.findViewById(R.id.channelLogo);
             channelName = itemView.findViewById(R.id.channelName);
             channelBtnSups = itemView.findViewById(R.id.subscribeBtn);
-            channelSubscriptions = itemView.findViewById(R.id.totalsup);
+          //  channelSubscriptions = itemView.findViewById(R.id.totalsup);
+
+
+
         }
 
         public void onDataBinding(final Context context, Item item) {
             Picasso.with(context).load(item.getSnippet().getThumbnails()
                     .getMedium().getUrl()).into(channelImg);
             channelName.setText(item.getSnippet().getTitle());
-            channelSubscriptions.setText(item.getStatistics().getSubscriberCount());
+            //channelSubscriptions.setText(item.getStatistics().getSubscriberCount());
+
+
+            channelBtnSups.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (isSubscribed == false) {
+                        channelBtnSups.setText("subscribed");
+                        channelBtnSups.setBackgroundColor(Color.GRAY);
+                        Toast.makeText(context, "Subscription Added", Toast.LENGTH_SHORT).show();
+                        isSubscribed = true;
+
+                    } else {
+                        channelBtnSups.setText("subscribe");
+                        channelBtnSups.setBackgroundColor(Color.RED);
+                        Toast.makeText(context, "Subscription Removed", Toast.LENGTH_SHORT).show();
+                        isSubscribed = false;
+                    }
+                }
+            });
         }
     }
 }

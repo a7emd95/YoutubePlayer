@@ -21,40 +21,28 @@
         android:id="@+id/channelName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/subscribeBtn"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/channelLogo"
         tools:text="chnnel name" />
 
-    <ToggleButton
+    <Button
         android:id="@+id/subscribeBtn"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@android:color/holo_red_dark"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/holo_red_light"
         android:text="subscribe"
         android:textColor="@android:color/white"
-        android:textOff="subscribe"
-        android:textOn="subscribed"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/totalsup"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/channelName" />
-
-    <TextView
-        android:id="@+id/totalsup"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textAlignment="viewEnd"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/subscribeBtn"
+        app:layout_constraintBottom_toBottomOf="@+id/channelName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/subscribeBtn"
-        app:layout_constraintTop_toTopOf="@+id/subscribeBtn"
-        tools:text="1513165165" />
+        app:layout_constraintStart_toEndOf="@+id/channelName"
+        app:layout_constraintTop_toTopOf="@+id/channelName" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
