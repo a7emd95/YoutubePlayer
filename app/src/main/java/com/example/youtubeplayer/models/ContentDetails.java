@@ -6,7 +6,6 @@ public class ContentDetails {
 
     private RelatedPlaylists relatedPlaylists;
 
-
     public ContentDetails(RelatedPlaylists relatedPlaylists) {
         super();
         this.relatedPlaylists = relatedPlaylists;
@@ -15,9 +14,7 @@ public class ContentDetails {
     public RelatedPlaylists getRelatedPlaylists() {
         return relatedPlaylists;
     }
-
     public void setRelatedPlaylists(RelatedPlaylists relatedPlaylists) {
         this.relatedPlaylists = relatedPlaylists;
     }
-
 }

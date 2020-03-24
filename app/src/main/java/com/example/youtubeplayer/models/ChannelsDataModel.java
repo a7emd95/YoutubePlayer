@@ -1,6 +1,8 @@
 
 package com.example.youtubeplayer.models;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 public class ChannelsDataModel {
@@ -8,11 +10,11 @@ public class ChannelsDataModel {
     private String kind;
     private String etag;
     private PageInfo pageInfo;
-    private List<Item> items = null;
+    @SerializedName("items")
+    private List<Item> items ;
 
     public ChannelsDataModel() {
     }
-
     public ChannelsDataModel(String kind, String etag, PageInfo pageInfo, List<Item> items) {
         super();
         this.kind = kind;
@@ -24,33 +26,16 @@ public class ChannelsDataModel {
     public String getKind() {
         return kind;
     }
-
-    public void setKind(String kind) {
-        this.kind = kind;
-    }
-
     public String getEtag() {
         return etag;
     }
-
-    public void setEtag(String etag) {
-        this.etag = etag;
-    }
-
     public PageInfo getPageInfo() {
         return pageInfo;
     }
-
-    public void setPageInfo(PageInfo pageInfo) {
-        this.pageInfo = pageInfo;
-    }
-
     public List<Item> getItems() {
         return items;
     }
 
-    public void setItems(List<Item> items) {
-        this.items = items;
-    }
+
 
 }

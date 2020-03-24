@@ -12,24 +12,12 @@ public class Snippet {
     private Localized localized;
     private String country;
 
-    /**
-     * No args constructor for use in serialization
-     * 
-     */
     public Snippet() {
     }
 
-    /**
-     * 
-     * @param customUrl
-     * @param country
-     * @param publishedAt
-     * @param localized
-     * @param description
-     * @param title
-     * @param thumbnails
-     */
-    public Snippet(String title, String description, String customUrl, String publishedAt, Thumbnails thumbnails, Localized localized, String country) {
+    public Snippet(String title, String description,
+                   String customUrl, String publishedAt,
+                   Thumbnails thumbnails, Localized localized, String country) {
         super();
         this.title = title;
         this.description = description;

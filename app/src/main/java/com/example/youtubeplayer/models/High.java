@@ -8,19 +8,9 @@ public class High {
     private Integer width;
     private Integer height;
 
-    /**
-     * No args constructor for use in serialization
-     * 
-     */
     public High() {
     }
 
-    /**
-     * 
-     * @param width
-     * @param url
-     * @param height
-     */
     public High(String url, Integer width, Integer height) {
         super();
         this.url = url;

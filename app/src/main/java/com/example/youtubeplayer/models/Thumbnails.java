@@ -8,19 +8,9 @@ public class Thumbnails {
     private Medium medium;
     private High high;
 
-    /**
-     * No args constructor for use in serialization
-     * 
-     */
     public Thumbnails() {
     }
 
-    /**
-     * 
-     * @param _default
-     * @param high
-     * @param medium
-     */
     public Thumbnails(Default _default, Medium medium, High high) {
         super();
         this._default = _default;
@@ -51,5 +41,4 @@ public class Thumbnails {
     public void setHigh(High high) {
         this.high = high;
     }
-
 }

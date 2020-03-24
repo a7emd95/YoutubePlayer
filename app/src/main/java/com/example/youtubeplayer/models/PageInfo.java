@@ -7,18 +7,9 @@ public class PageInfo {
     private Integer totalResults;
     private Integer resultsPerPage;
 
-    /**
-     * No args constructor for use in serialization
-     * 
-     */
     public PageInfo() {
     }
 
-    /**
-     * 
-     * @param totalResults
-     * @param resultsPerPage
-     */
     public PageInfo(Integer totalResults, Integer resultsPerPage) {
         super();
         this.totalResults = totalResults;

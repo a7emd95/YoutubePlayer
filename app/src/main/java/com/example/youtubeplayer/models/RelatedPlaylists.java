@@ -8,19 +8,9 @@ public class RelatedPlaylists {
     private String watchHistory;
     private String watchLater;
 
-    /**
-     * No args constructor for use in serialization
-     * 
-     */
     public RelatedPlaylists() {
     }
 
-    /**
-     * 
-     * @param watchHistory
-     * @param watchLater
-     * @param uploads
-     */
     public RelatedPlaylists(String uploads, String watchHistory, String watchLater) {
         super();
         this.uploads = uploads;

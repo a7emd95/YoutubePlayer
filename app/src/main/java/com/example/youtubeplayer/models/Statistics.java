@@ -10,22 +10,12 @@ public class Statistics {
     private Boolean hiddenSubscriberCount;
     private String videoCount;
 
-    /**
-     * No args constructor for use in serialization
-     * 
-     */
     public Statistics() {
     }
 
-    /**
-     * 
-     * @param videoCount
-     * @param subscriberCount
-     * @param viewCount
-     * @param hiddenSubscriberCount
-     * @param commentCount
-     */
-    public Statistics(String viewCount, String commentCount, String subscriberCount, Boolean hiddenSubscriberCount, String videoCount) {
+    public Statistics(String viewCount, String commentCount,
+                      String subscriberCount, Boolean hiddenSubscriberCount,
+                      String videoCount) {
         super();
         this.viewCount = viewCount;
         this.commentCount = commentCount;
@@ -73,5 +63,4 @@ public class Statistics {
     public void setVideoCount(String videoCount) {
         this.videoCount = videoCount;
     }
-
 }

@@ -2,6 +2,7 @@ package com.example.youtubeplayer.repository;
 
 import com.example.youtubeplayer.models.ChannelsDataModel;
 import com.example.youtubeplayer.services.YoutubeApi;
+import com.example.youtubeplayer.utlites.ChannelsIds;
 import com.example.youtubeplayer.utlites.Constants;
 import com.example.youtubeplayer.utlites.YoutubeKeyApi;
 
@@ -16,7 +17,6 @@ public class YoutubeChannelRepository {
     Retrofit retrofit;
     YoutubeApi youtubeApi;
 
-
     public YoutubeChannelRepository(YoutubeChannelCallBack youtubeChannelCallBack) {
         this.youtubeChannelCallBack = youtubeChannelCallBack;
         retrofit = new Retrofit.Builder()
@@ -27,8 +27,8 @@ public class YoutubeChannelRepository {
     }
 
     public void getChannels() {
-        Call<ChannelsDataModel> youtubeApiResponse = youtubeApi.getChannels(Constants.PART, Constants.CHANNEL_ID
-                , YoutubeKeyApi.API);
+        Call<ChannelsDataModel> youtubeApiResponse = youtubeApi.getChannels(Constants.PART,
+                ChannelsIds.chnlist, YoutubeKeyApi.API);
 
         youtubeApiResponse.enqueue(new Callback<ChannelsDataModel>() {
             @Override

@@ -11,23 +11,12 @@ public class Item {
     private ContentDetails contentDetails;
     private Statistics statistics;
 
-    /**
-     * No args constructor for use in serialization
-     * 
-     */
     public Item() {
     }
 
-    /**
-     * 
-     * @param snippet
-     * @param kind
-     * @param etag
-     * @param id
-     * @param contentDetails
-     * @param statistics
-     */
-    public Item(String kind, String etag, String id, Snippet snippet, ContentDetails contentDetails, Statistics statistics) {
+    public Item(String kind, String etag, String id,
+                Snippet snippet, ContentDetails contentDetails,
+                Statistics statistics) {
         super();
         this.kind = kind;
         this.etag = etag;

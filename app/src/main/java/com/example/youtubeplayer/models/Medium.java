@@ -8,19 +8,9 @@ public class Medium {
     private Integer width;
     private Integer height;
 
-    /**
-     * No args constructor for use in serialization
-     * 
-     */
     public Medium() {
     }
 
-    /**
-     * 
-     * @param width
-     * @param url
-     * @param height
-     */
     public Medium(String url, Integer width, Integer height) {
         super();
         this.url = url;
